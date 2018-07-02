@@ -42,7 +42,7 @@ class AssetService {
   Future<PrintTemplate> getPrintTemplate(String uuid) async {
     if (uuid != null) {
       Map response = await NsmpRest.get(uuid);
-      return PrintTemplate.fromMap(response);
+      return new PrintTemplate.fromMap(response);
     }
     return null;
   }

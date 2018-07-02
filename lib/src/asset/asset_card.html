@@ -1,6 +1,9 @@
-<section class="printed-card" align="center"
+<section align="center"
 >
+    <div id="success">
         <svg id="barcode">
         </svg>
-    <div *ngFor="let item of additional">{{asset.getStringProperty(item)}}</div>
+        <div *ngFor="let item of additional">{{asset.getStringProperty(item)}}</div>
+    </div>
+    <div id="error" style="display: none"></div>
 </section>

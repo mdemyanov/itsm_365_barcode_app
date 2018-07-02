@@ -1,4 +1,4 @@
-import 'package:dartson/dartson.dart';
+//import 'package:dartson/dartson.dart';
 import 'package:dartson/type_transformer.dart';
 import 'package:intl/intl.dart';
 
@@ -26,7 +26,7 @@ class Asset {
   Asset(this._properties);
 
 }
-@Entity()
+
 class PrintTemplate {
   String height;
   String width;
@@ -54,16 +54,24 @@ class PrintTemplate {
     return [];
   }
 
-  static PrintTemplate fromMap(Map data) {
-    print(data);
-    Dartson dartson = new Dartson.JSON();
-    dartson.addTransformer(new DateTimeParser(), DateTime);
-    return dartson.map(data, new PrintTemplate());
+//  static PrintTemplate fromMap(Map data) {
+//    print(data);
+//    Dartson dartson = new Dartson.JSON();
+//    dartson.addTransformer(new DateTimeParser(), DateTime);
+//    return dartson.map(data, new PrintTemplate());
+//  }
+  PrintTemplate.fromMap(Map<String, Object> data) {
+    this.height = data['height'];
+    this.width = data['width'];
+    this.unit = data['unit'];
+    this.barcode = data['barcode'];
+    this.barcodeAttr = data['barcodeAttr'];
+    this.additional = data['additional'];
   }
 }
 
-class DateTimeParser extends TypeTransformer<DateTime> {
-  final DateFormat formatter = new DateFormat('yyyy.MM.dd HH:mm:ss');
-  DateTime decode(dynamic value) => formatter.parse(value);
-  dynamic encode(DateTime value) => value.toUtc().toIso8601String();
-}
+//class DateTimeParser extends TypeTransformer<DateTime> {
+//  final DateFormat formatter = new DateFormat('yyyy.MM.dd HH:mm:ss');
+//  DateTime decode(dynamic value) => formatter.parse(value);
+//  dynamic encode(DateTime value) => value.toUtc().toIso8601String();
+//}
