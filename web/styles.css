@@ -10,3 +10,59 @@ body {
 * {
   font-family: Roboto, Helvetica, Arial, sans-serif;
 }
+
+#barcodeContainer {
+  margin: 0;
+  background-color: white;
+  align-content: center;
+  text-align: center;
+}
+
+button #print {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+}
+
+button #print {
+  display: inline-block;
+  position: relative;
+  padding: 5px 8px;
+  top: 0;
+  font-size: 15px;
+  font-family: "Open Sans", Helvetica;
+  border-radius: 4px;
+  border-bottom: 1px solid rgba( 102, 102, 102, 0.5 );
+  background: #999999;
+  color: #fff;
+  box-shadow: 0px 0px 0px rgba( 102, 102, 102, 0.1 );
+
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+button:hover #print {
+  top: -10px;
+  box-shadow: 0px 10px 10px rgba( 102, 102, 102, 0.2 );
+
+  -webkit-transform: rotateX(20deg);
+  -moz-transform: rotateX(20deg);
+  -ms-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+}
+
+button:active #print {
+  top: 0px;
+  box-shadow: 0px 0px 0px rgba( 102, 102, 102, 0.0 );
+  background: #999999;
+}
