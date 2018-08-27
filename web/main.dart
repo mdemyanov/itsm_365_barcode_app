@@ -97,6 +97,7 @@ void main() async {
   try {
     new DartBarcode("#barcode", barcodeValue, options);
     svg.style.removeProperty('display');
+    svg.style.maxWidth = printTemplate.getWidth();
     for (String item in asset.getProperties(printTemplate.getAdditional())) {
       container.appendHtml('<div>$item</div>');
     }
