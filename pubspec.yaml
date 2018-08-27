@@ -5,10 +5,10 @@ version: 1.0.1
 #author: mdemyanov <email@example.com>
 
 environment:
-  sdk: '>=2.0.0-dev.68.0 <3.0.0'
+  sdk: '>=2.0.0 <3.0.0'
 
 dependencies:
-  dart_barcode: ^1.0.0
+#  dart_barcode: ^1.0.0
   naumen_smp_jsapi: ^1.0.0
 
 dev_dependencies:

@@ -1,9 +1,11 @@
 import 'dart:html';
 
 import 'package:naumen_smp_jsapi/naumen_smp_jsapi.dart';
-import 'package:dart_barcode/dart_barcode.dart';
+//import 'package:dart_barcode/dart_barcode.dart';
 
 import 'package:nsmp_barcode_app/src/nsmp/nsmp_objects.dart';
+import 'package:nsmp_barcode_app/src/dart_barcode/barcode.dart';
+import 'package:nsmp_barcode_app/src/dart_barcode/options.dart';
 
 String noAssetError =
     'Не удалось получить карточку актива. Обратитесь к администратору сервера.';
